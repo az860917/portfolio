@@ -1,0 +1,50 @@
+.proj-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.proj-featured { grid-column: span 2; }
+
+.proj-card {
+  background: var(--bg3); border: 1px solid rgba(255,255,255,0.07);
+  display: flex; flex-direction: column; position: relative; overflow: hidden;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.proj-card:hover {
+  transform: translateY(-6px); border-color: rgba(0,240,255,0.3);
+  box-shadow: 0 16px 48px rgba(0,0,0,.5), 0 0 0 1px rgba(0,240,255,.1);
+}
+.proj-top-bar { height: 3px; background: linear-gradient(90deg, var(--cyan), var(--purple)); }
+.proj-top-bar.green { background: linear-gradient(90deg, var(--cyan), var(--green)); }
+
+.proj-header { padding: 1.6rem 1.6rem .8rem; }
+.proj-idx { font-family: 'Space Mono', monospace; font-size: .65rem; color: #334; letter-spacing: .15em; margin-bottom: .8rem; }
+.proj-name { font-family: 'Syne', sans-serif; font-size: 1.05rem; font-weight: 800; color: #fff; margin-bottom: .3rem; }
+.proj-date { font-family: 'Space Mono', monospace; font-size: .68rem; color: var(--purple); }
+
+.proj-body { padding: .8rem 1.6rem 1.6rem; flex: 1; display: flex; flex-direction: column; }
+.proj-desc { font-size: .83rem; color: #6678aa; line-height: 1.85; margin-bottom: 1.2rem; }
+.proj-stack { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; }
+.ps {
+  font-family: 'Space Mono', monospace; font-size: .66rem;
+  background: rgba(155,107,255,0.07); border: 1px solid rgba(155,107,255,0.2);
+  color: var(--purple); padding: 2px 9px;
+}
+.ps.cyan { background: rgba(0,240,255,0.07); border-color: rgba(0,240,255,0.2); color: var(--cyan); }
+
+.proj-bullets { list-style: none; flex: 1; }
+.proj-bullets li {
+  font-size: .8rem; color: #556; padding: .3rem 0;
+  display: flex; gap: .5rem; align-items: flex-start;
+}
+.proj-bullets li::before { content: '✦'; color: var(--green); font-size: .55rem; margin-top: 3px; flex-shrink: 0; }
+
+.proj-footer { padding: 1rem 1.6rem; border-top: 1px solid rgba(255,255,255,.05); }
+.proj-link {
+  font-family: 'Space Mono', monospace; font-size: .72rem; color: var(--cyan);
+  text-decoration: none; display: inline-flex; align-items: center; gap: .4rem;
+  transition: gap .2s;
+}
+.proj-link:hover { gap: .7rem; }
+.proj-link.dim { color: #334; pointer-events: none; }
+
+@media (max-width: 900px) {
+  .proj-grid { grid-template-columns: 1fr; }
+  .proj-featured { grid-column: span 1; }
+}

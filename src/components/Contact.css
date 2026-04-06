@@ -1,0 +1,49 @@
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+
+.contact-heading {
+  font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+  color: #fff; line-height: 1.2; margin-bottom: 1rem;
+}
+.contact-heading span { color: var(--cyan); }
+.contact-sub { font-size: .9rem; color: #6678aa; line-height: 2; margin-bottom: 2.5rem; }
+
+.c-items { display: flex; flex-direction: column; gap: .9rem; }
+.c-item {
+  display: flex; align-items: center; gap: 1.1rem;
+  background: var(--bg3); padding: 1rem 1.4rem;
+}
+.c-icon {
+  width: 38px; height: 38px; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,240,255,.06); border: 1px solid rgba(0,240,255,.15); font-size: 1rem; flex-shrink: 0;
+}
+.c-lbl { font-size: .65rem; color: #445; font-family: 'Space Mono', monospace; letter-spacing: .1em; margin-bottom: .15rem; }
+.c-val { font-size: .85rem; color: #99aacc; }
+.c-val a { color: var(--cyan); text-decoration: none; }
+.c-dim { color: #334 !important; font-size: .78rem !important; }
+
+.hire-card {
+  background: var(--bg3); border: 1px solid rgba(0,240,255,.15);
+  padding: 2.5rem; text-align: center; position: relative; overflow: hidden;
+}
+.hire-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0,240,255,.07), transparent 60%);
+  pointer-events: none;
+}
+.hire-badge {
+  display: inline-flex; align-items: center; gap: .6rem;
+  border: 1px solid rgba(34,197,94,.35); background: rgba(34,197,94,.06);
+  padding: .5rem 1.2rem; margin-bottom: 1.8rem;
+  font-family: 'Space Mono', monospace; font-size: .72rem; color: var(--green); letter-spacing: .1em;
+}
+.hire-title { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: .8rem; }
+.hire-desc { font-size: .83rem; color: #6678aa; line-height: 1.9; margin-bottom: 2rem; }
+
+.hire-certs { display: flex; flex-direction: column; gap: .5rem; margin-top: 2rem; padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.06); }
+.cert-row {
+  display: flex; align-items: center; gap: .7rem;
+  font-size: .78rem; color: #556; font-family: 'Space Mono', monospace;
+}
+.cert-row::before { content: '◆'; color: var(--purple); font-size: .5rem; }
+
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
